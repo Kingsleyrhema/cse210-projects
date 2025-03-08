@@ -1,0 +1,9 @@
+Version control is a system that tracks changes to files over time, allowing multiple people to collaborate on a project without losing previous versions of their work. It enables developers to revert to earlier versions if needed, compare changes, and keep a clear history of modifications.
+
+One major benefit of version control is that it prevents data loss and conflicting changes when working in a team. Developers can work on different features simultaneously without overwriting each other’s code.
+
+For example, in a software development team, version control (such as Git) allows multiple developers to work on different branches of the same project. Once their changes are tested, they can merge them back into the main codebase without disrupting ongoing work.
+
+A common Git command used in version control is:
+
+git commit -m "Added new feature"
