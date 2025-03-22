@@ -7,7 +7,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // List of scriptures to choose from
+        
         List<Scripture> scriptures = new List<Scripture>
         {
             new Scripture(new Reference("John", 3, 16), "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life."),
@@ -15,7 +15,7 @@ class Program
             new Scripture(new Reference("Philippians", 4, 13), "I can do all things through Christ who strengthens me.")
         };
 
-        // Randomly pick a scripture
+        
         Random random = new Random();
         Scripture scripture = scriptures[random.Next(scriptures.Count)];
 
@@ -30,7 +30,7 @@ class Program
             if (input.ToLower() == "quit")
                 break;
 
-            scripture.HideRandomWords(2); // Hide 2 words at a time
+            scripture.HideRandomWords(2);
         }
 
         Console.Clear();
@@ -39,7 +39,7 @@ class Program
     }
 }
 
-// Represents a word in the scripture (Encapsulation applied)
+
 class Word
 {
     private string _text;
@@ -67,7 +67,7 @@ class Word
     }
 }
 
-// Handles scripture reference (Supports single & multiple verses)
+
 class Reference
 {
     public string Book { get; }
@@ -75,7 +75,7 @@ class Reference
     public int? EndVerse { get; }
     public int Chapter { get; }
 
-    // Constructor for single verse
+    
     public Reference(string book, int chapter, int verse)
     {
         Book = book;
@@ -84,7 +84,7 @@ class Reference
         EndVerse = null;
     }
 
-    // Constructor for multiple verses
+    
     public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         Book = book;
@@ -101,7 +101,7 @@ class Reference
     }
 }
 
-// Manages scripture text and word hiding
+
 class Scripture
 {
     private Reference _reference;
